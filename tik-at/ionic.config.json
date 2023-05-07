@@ -1,0 +1,7 @@
+{
+  "name": "TikAt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

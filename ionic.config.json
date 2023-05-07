@@ -1,7 +1,0 @@
-{
-  "name": "tikat",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
