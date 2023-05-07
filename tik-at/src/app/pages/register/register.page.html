@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>  
+    <ion-title>- TikAt Register -</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,26 +13,25 @@
       <ion-col size="12">
         <form [formGroup]="registerForm" (ngSubmit)="register()">
           <ion-item>
-            <ion-label position="floating">Username</ion-label>
-            <ion-input type="text" formControlName="username"></ion-input>
+            <ion-input type="text" formControlName="name" label="Name" labelPlacement="floating"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Email</ion-label>
-            <ion-input type="email" formControlName="email"></ion-input>
+            <ion-input type="text" formControlName="surname" label="Surname" labelPlacement="floating"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input type="email" formControlName="email" label="Email" labelPlacement="floating"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Password</ion-label>
-            <ion-input type="password" formControlName="password"></ion-input>
+            <ion-input type="password" formControlName="password" label="Password" labelPlacement="floating"></ion-input>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">Confirm Password</ion-label>
-            <ion-input type="password" formControlName="confirmPassword"></ion-input>
+            <ion-input type="password" formControlName="confirmPassword" label="Confirm Password" labelPlacement="floating"></ion-input>
           </ion-item>
-
-          <ion-button type="submit" [disabled]="registerForm.invalid">Register</ion-button>
+          <ion-button type="submit" [disabled]="registerForm.invalid" expand="block">Register</ion-button>
         </form>
       </ion-col>
     </ion-row>

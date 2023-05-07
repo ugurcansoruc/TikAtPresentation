@@ -1,0 +1,22 @@
+.auth-form {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    right: 10%;
+  }
+
+  .line-text {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: white;
+      margin: 0 10px;
+    }
+  }
+  
