@@ -6,16 +6,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  private apiUrl = 'https://your-api-url.com/auth';
+  private apiUrl = 'https://localhost:7248/api';
 
   constructor(private http: HttpClient) { }
 
-  login(username: string, password: string) {
-    return this.http.post(`${this.apiUrl}/login`, { username, password });
+  login(email: string, password: string) {
+    return this.http.post(`${this.apiUrl}/login`, { email, password });
   }
 
-  register(username: string, password: string, email: string) {
-    return this.http.post(`${this.apiUrl}/register`, { username, password, email });
+  register(name: string, surname: string, age: number ,email: string, password: string, confirmPassword: string) {
+    return this.http.post(`${this.apiUrl}/Users`, {name, surname, age, email, password, confirmPassword});
   }
 
   saveToken(token: string) {
@@ -29,5 +29,4 @@ export class AuthService {
   logout() {
     localStorage.removeItem('token');
   }
-
 }

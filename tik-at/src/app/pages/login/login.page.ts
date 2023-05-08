@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService) {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
@@ -22,8 +22,8 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    const { username, password } = this.loginForm.value;
-    this.authService.login(username, password).subscribe((response: any) => {
+    const { email, password } = this.loginForm.value;
+    this.authService.login(email, password).subscribe((response: any) => {
       this.authService.saveToken(response.token);
       // Navigate to home page or any other page
     });
